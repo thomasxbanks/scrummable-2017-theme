@@ -29,6 +29,7 @@ html.redline * {
 @import "base/animations"; // Useful Animations
 @import "base/variables"; // Define the site variables
 @import "base/normal"; // Level the playing field
+@import "base/global"; // Universal styles
 /*
   TYPOGRAPHY
 */
@@ -43,12 +44,13 @@ html.redline * {
 
 @import "elements/hero"; // Giant hero image in "that" style
 
+@import "elements/article-teaser"; 
 
 /*********************/
 /*      EXAMPLES     */
 /*********************/
 $small: 400px;
-$large: 1000px;
+$large: 1440px;
 
 html {
 	/* The base (smallest) value. */

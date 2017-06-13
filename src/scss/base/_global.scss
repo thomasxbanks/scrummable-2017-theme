@@ -1,0 +1,28 @@
+body {
+    background: darken($clr_white, 5%);
+}
+
+.central-column {
+    margin-right: auto;
+    margin-left: auto;
+    @media (max-width: $max-width) {
+        max-width: calc($max-width + 1rem);
+        padding: 0.5rem;
+    }
+    @media (min-width: ($max-width + 1)) {
+        max-width: $max-width;
+        padding: 0.5rem 0;
+    }
+}
+
+img {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+@supports (object-fit: cover) {
+    img {
+        object-fit: cover;
+    }
+}

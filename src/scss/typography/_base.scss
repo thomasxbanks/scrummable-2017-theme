@@ -17,7 +17,7 @@
 
 .silvio {
   font-family: $font_face-accent;
-  font-size: $font_size-xlg;
+  font-size: $font_size-lrg;
   font-smooth: auto;
   font-size-adjust: none;
   font-variant: normal;
@@ -53,7 +53,7 @@
 
 .ralphie {
   font-family: $font_face-accent;
-  font-size: $font_size-med;
+  font-size: $font_size-std;
   font-smooth: auto;
   font-size-adjust: none;
   font-variant: normal;
@@ -65,7 +65,7 @@
 
 .richie {
   font-family: $font_face-main;
-  font-size: $font_size-std;
+  font-size: 1rem;
   font-smooth: auto;
   font-size-adjust: none;
   font-variant: normal;
@@ -83,7 +83,7 @@
   font-variant: normal;
   font-kerning: none;
   font-variant-ligatures: none;
-  font-weight: normal;
+  font-weight: 300;
   font-style: normal;
 }
 

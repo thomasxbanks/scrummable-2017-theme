@@ -1,16 +1,23 @@
-/*------------------------------------*\
-  #BUTTON--NORMALISE
-\*------------------------------------*/
-/*
-  Buttons are to be used when the result of the interaction occurs on the same page.
-  Buttons should not be used for page links or submitting a form to a different page
-*/
+//  Buttons are to be used when the result of the interaction occurs on the same page.
+//  Buttons should not be used for page links or submitting a form to a different page
+
 button {
     -webkit-appearance: none;
     -webkit-font-smoothing: antialiased;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
     -webkit-tap-highlight-color: transparent; // i.e. Nexus5/Chrome and Kindle Fire HD 7"
     border: none;
+    cursor: pointer;
+    display: block;
+    max-width: 200px;
+    padding: 1rem;
+    margin: 1rem 0;
+    background: lighten($clr_black, 30%);
+    color: set-text-color(lighten($clr_black, 30%));
+    transition: background $ease-main $speed-fast;
+    text-align: center;
+    text-transform: uppercase;
+    @extend .bobby;
 }
 
 button::-moz-focus-inner,
@@ -25,4 +32,15 @@ input:focus,
 select:focus,
 textarea:focus {
     outline: 0;
+}
+
+button:hover {
+    background: $clr_black;
+    color: set-text-color($clr_black);
+}
+
+// Links styled like buttons
+.button {
+    @extend button;
+    text-decoration: none;
 }
