@@ -1,4 +1,6 @@
-# Boilerplate
+# Scrummable 2017
+
+Rebuild of the Scrummable 2016 theme. Mostly to incorporate new things I've learned.
 
 ## Installation
 - Clone repository

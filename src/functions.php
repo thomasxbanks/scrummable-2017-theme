@@ -21,16 +21,11 @@ get_template_part('php/functions', 'editor-style');
 
 function scrummable_scripts()
 {
-    wp_enqueue_style('scrummable-fa-style', '//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
+    wp_enqueue_style('scrummable-fa-style', '//fonts.googleapis.com/icon?family=Material+Icons');
     wp_enqueue_style('scrummable-style', get_stylesheet_uri());
 
-    wp_enqueue_script('jQuery', 'https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js');
-    wp_enqueue_script('masonry', 'https://cdnjs.cloudflare.com/ajax/libs/masonry/3.3.0/masonry.pkgd.js', array('jQuery'), '20130115', true);
-    wp_enqueue_script('easings', 'https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js', array('jQuery'), '20130115', true);
-    wp_enqueue_script('scrummable-js-vars', get_template_directory_uri() . '/js/variables.js', array(), '20120206', true);
-    wp_enqueue_script('scrummable-js-calc', get_template_directory_uri() . '/js/calculations.js', array(), '20120206', true);
-    wp_enqueue_script('scrummable-js-func', get_template_directory_uri() . '/js/functions.js', array(), '20120206', true);
-    wp_enqueue_script('scrummable-js', get_template_directory_uri() . '/js/main.js', array(), '20120206', true);
+    wp_enqueue_script('jQuery', '//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js');
+    wp_enqueue_script('scrummable-js', get_template_directory_uri() . '/js/app.js', array(), '20120206', true);
 
     if (is_singular() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
