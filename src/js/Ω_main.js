@@ -3,7 +3,7 @@
 
 // Log for debug
 console.log('js loaded', browser.width)
-const endpoint = "https://scrummable.com/wp-json/wp/v2/posts?_embed"
+const endpoint = "//scrummable.com/wp-json/wp/v2/posts?_embed"
 axios.get(endpoint).then((response) => {
     for (var i = 0; i < response.data.length; i++) {
         // log for debug

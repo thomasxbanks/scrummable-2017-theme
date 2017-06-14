@@ -103,7 +103,7 @@ function easeInOut(currentTime, start, change, duration) {
 
 // Log for debug
 console.log('js loaded', browser.width);
-var endpoint = "https://scrummable.com/wp-json/wp/v2/posts?_embed";
+var endpoint = "//scrummable.com/wp-json/wp/v2/posts?_embed";
 axios.get(endpoint).then(function (response) {
     for (var i = 0; i < response.data.length; i++) {
         // log for debug
