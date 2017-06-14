@@ -1,0 +1,23 @@
+#masthead nav {
+    float: right;
+    button {
+        width: 60px;
+        height: 60px;
+        padding: 1rem;
+        margin: 0.25rem;
+        background: rgba($clr_black, 0.3);
+        text-align: center;
+        &:hover {
+            background: rgba($clr_black, 0.6);
+        }
+    }
+}
+
+ul.list-hz {
+    list-style-type: none;
+    padding: 0;
+    font-size: 0;
+    li {
+        display: inline-block;
+    }
+}

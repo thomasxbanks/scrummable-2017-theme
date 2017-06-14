@@ -6,7 +6,7 @@
     }
 }
 
-@media (min-width: 768px) and (max-width: 959px) {
+@media (min-width: 768px) and (max-width: 1023px) {
     .article-container-teaser {
         text-align: center;
         font-size: 0;
@@ -32,7 +32,7 @@
     }
 }
 
-@media (min-width: 960px) {
+@media (min-width: 1024px) {
     .article-container-teaser {
         display: block;
         font-size: 0;
@@ -60,7 +60,6 @@
             justify-content: flex-start;
             align-items: stretch;
             align-content: flex-start;
-
             footer {
                 margin-top: auto;
             }
@@ -75,25 +74,9 @@
     box-shadow: 0 0 0.5rem rgba(darken($clr_white, 50%), 0.6);
     &:hover {
         box-shadow: 0 0 1rem rgba(darken($clr_white, 50%), 0.3);
-        img {
-            transform: scale(1.1);
-        }
-    }
-    .article-hero-wrapper {
-        overflow: hidden;
-    }
-    img {
-        width: 100%;
-        height: auto;
-        display: none;
-        transform: scale(1);
-        transition: transform $ease-main $speed-slow;
-        @supports (object-fit: cover) {
-            height: 100%;
-            display: block;
-        }
     }
     .content {
+        position: relative;
         @media (min-width: 719px) {
             max-width: 720px;
         }
@@ -120,26 +103,27 @@
         header {
             height: 500px;
         }
-        .featured-flag {
-            position: absolute;
-            top: 0.5rem;
-            left: -0.5rem;
-            z-index: 11;
-            background: $clr_brand;
-            @extend .bobby;
-            text-transform: uppercase;
-            padding: 0.5rem;
-            &:before {
-                content: "";
-                width: 0;
-                height: 0;
-                border-style: solid;
-                border-width: 0 0.5rem 0.5rem 0;
-                border-color: transparent darken($clr_brand, 30%) transparent transparent;
-                position: absolute;
-                left: 0;
-                bottom: -0.5rem;
-            }
-        }
+    }
+}
+
+.featured-flag {
+    position: absolute;
+    top: -1rem;
+    left: -0.5rem;
+    z-index: 11;
+    background: $clr_brand;
+    @extend .bobby;
+    text-transform: uppercase;
+    padding: 0.5rem;
+    &:before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0.5rem 0.5rem 0;
+        border-color: transparent darken($clr_brand, 30%) transparent transparent;
+        position: absolute;
+        left: 0;
+        bottom: -0.5rem;
     }
 }

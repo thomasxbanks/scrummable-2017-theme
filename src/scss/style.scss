@@ -42,9 +42,15 @@ html.redline * {
 @import "elements/buttons"; // Button styles
 @import "elements/forms"; // Form styles
 
-@import "elements/hero"; // Giant hero image in "that" style
+// Page layout elements
+@import "elements/masthead"; // Considerate masthead
+@import "elements/page_hero"; // Giant hero image in "that" style
 
-@import "elements/article-teaser"; 
+@import "elements/navigation-masthead"; // Icons in the Masthead
+@import "elements/navigation-primary"; // Navigation tray
+
+@import "elements/article-teaser"; // Article excerpts
+@import "elements/hero"; // Article featured images
 
 /*********************/
 /*      EXAMPLES     */

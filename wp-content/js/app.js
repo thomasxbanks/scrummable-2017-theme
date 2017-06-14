@@ -117,18 +117,18 @@ axios.get(endpoint).then(function (response) {
 });
 
 var printArticle = function printArticle(article, index) {
-    return "\n                <article class=\"article-teaser " + (index === 0 ? 'featured' : '') + "\">\n                    <header class=\"article-hero-wrapper\" style=\"background-image: url('" + article['_embedded']["wp:featuredmedia"][0].source_url + "')\">\n                        " + (index === 0 ? '<span class=\'featured-flag\'>featured</span>' : '') + "\n                        <img class=\"article-hero-image-thumb\" src=\"" + article['_embedded']["wp:featuredmedia"][0].media_details.sizes.medium.source_url + "\" />\n                        <img class=\"article-hero-image-full\" src=\"" + article['_embedded']["wp:featuredmedia"][0].source_url + "\" />\n                    </header>\n                    <div class=\"content\">\n                        <h2>" + article.title.rendered + "</h2>\n                        <p>" + article.excerpt.rendered + "</p>\n                    </div>\n                    <footer>\n                        <a href=\"\" class=\"button\">Read more</a>\n                    </footer>\n                </article>\n            ";
+    return "\n                <article class=\"article-teaser " + (index === 0 ? 'featured' : '') + "\">\n                    <header class=\"hero_wrapper\" style=\"background-image: url('" + article['_embedded']["wp:featuredmedia"][0].source_url + "')\">\n                        <img class=\"hero_img-thumb\" src=\"" + article['_embedded']["wp:featuredmedia"][0].media_details.sizes.medium.source_url + "\" />\n                        <img class=\"hero_img-full\" src=\"" + article['_embedded']["wp:featuredmedia"][0].source_url + "\" />\n                    </header>\n                    <div class=\"content\">\n                        " + (index === 0 ? '<span class=\'featured-flag\'>featured</span>' : '') + "\n                        <h2>" + article.title.rendered + "</h2>\n                        <p>" + article.excerpt.rendered + "</p>\n                    </div>\n                    <footer>\n                        <a href=\"\" class=\"button\">Read more</a>\n                    </footer>\n                </article>\n            ";
 };
 
 var transformHeroImages = function transformHeroImages() {
-    var heroImage = document.querySelectorAll('.article-hero-image-full');
+    var heroImage = document.querySelectorAll('.hero_img-full');
     for (var i = 0; i < heroImage.length; i++) {
         var hero = heroImage[i];
         console.log(hero);
         hero.addEventListener('load', function () {
-            document.querySelector('.article-hero-image-thumb').style.opacity = 0;
+            document.querySelector('.hero_img-thumb').style.opacity = 0;
             setTimeout(function () {
-                document.querySelector('.article-hero-image-thumb').outerHTML = '';
+                document.querySelector('.hero_img-thumb').outerHTML = '';
             }, 300);
         });
     }
