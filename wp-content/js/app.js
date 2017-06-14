@@ -103,27 +103,34 @@ function easeInOut(currentTime, start, change, duration) {
 
 // Log for debug
 console.log('js loaded', browser.width);
-var endpoint = "//scrummable.com/wp-json/wp/v2/posts?_embed";
+var endpoint = "https://scrummable.com/wp-json/wp/v2/posts?_embed";
 axios.get(endpoint).then(function (response) {
-    response.data.forEach(function (article, index) {
+    for (var i = 0; i < response.data.length; i++) {
         // log for debug
-        //console.info(article)
-        document.querySelector('.article-container-teaser').innerHTML += printArticle(article, index);
-    });
+        console.info(response.data[i]);
+        document.querySelector('.article-container-teaser').innerHTML += printArticle(response.data[i], i);
+    }
 
-    document.querySelectorAll('.article-hero-image-full').forEach(function (hero) {
-        hero.addEventListener('load', function () {
-            document.querySelector('.article-hero-image-thumb').style.opacity = 0;
-            setTimeout(function () {
-                document.querySelector('.article-hero-image-thumb').outerHTML = '';
-            }, 300);
-        });
-    });
+    transformHeroImages();
 }).catch(function (error) {
     console.error(error);
 });
 
 var printArticle = function printArticle(article, index) {
     return "\n                <article class=\"article-teaser " + (index === 0 ? 'featured' : '') + "\">\n                    <header class=\"article-hero-wrapper\" style=\"background-image: url('" + article['_embedded']["wp:featuredmedia"][0].source_url + "')\">\n                        " + (index === 0 ? '<span class=\'featured-flag\'>featured</span>' : '') + "\n                        <img class=\"article-hero-image-thumb\" src=\"" + article['_embedded']["wp:featuredmedia"][0].media_details.sizes.medium.source_url + "\" />\n                        <img class=\"article-hero-image-full\" src=\"" + article['_embedded']["wp:featuredmedia"][0].source_url + "\" />\n                    </header>\n                    <div class=\"content\">\n                        <h2>" + article.title.rendered + "</h2>\n                        <p>" + article.excerpt.rendered + "</p>\n                    </div>\n                    <footer>\n                        <a href=\"\" class=\"button\">Read more</a>\n                    </footer>\n                </article>\n            ";
+};
+
+var transformHeroImages = function transformHeroImages() {
+    var heroImage = document.querySelectorAll('.article-hero-image-full');
+    for (var i = 0; i < heroImage.length; i++) {
+        var hero = heroImage[i];
+        console.log(hero);
+        hero.addEventListener('load', function () {
+            document.querySelector('.article-hero-image-thumb').style.opacity = 0;
+            setTimeout(function () {
+                document.querySelector('.article-hero-image-thumb').outerHTML = '';
+            }, 300);
+        });
+    }
 };
 //# sourceMappingURL=app.js.map

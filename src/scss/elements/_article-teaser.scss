@@ -76,11 +76,16 @@
     &:hover {
         box-shadow: 0 0 1rem rgba(darken($clr_white, 50%), 0.3);
     }
+    .article-hero-wrapper {
+        overflow: hidden;
+    }
     img {
         width: 100%;
         height: auto;
+        display: none;
         @supports (object-fit: cover) {
             height: 100%;
+            display: block;
         }
     }
     .content {
@@ -108,7 +113,7 @@
         display: block;
         width: calc(100% - 1rem);
         header {
-            height: 50vh;
+            height: 500px;
         }
         .featured-flag {
             position: absolute;

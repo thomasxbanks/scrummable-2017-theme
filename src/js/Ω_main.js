@@ -3,23 +3,16 @@
 
 // Log for debug
 console.log('js loaded', browser.width)
-const endpoint = "//scrummable.com/wp-json/wp/v2/posts?_embed"
+const endpoint = "https://scrummable.com/wp-json/wp/v2/posts?_embed"
 axios.get(endpoint).then((response) => {
-    response.data.forEach((article, index) => {
+    for (var i = 0; i < response.data.length; i++) {
         // log for debug
-        //console.info(article)
-        document.querySelector('.article-container-teaser').innerHTML += printArticle(article, index)
-    })
+        console.info(response.data[i])
+        document.querySelector('.article-container-teaser').innerHTML += printArticle(response.data[i], i)
+    }
 
-    document.querySelectorAll('.article-hero-image-full').forEach((hero) => {
-        hero.addEventListener('load', () => {
-            document.querySelector('.article-hero-image-thumb').style.opacity = 0
-            setTimeout(() => {
-                document.querySelector('.article-hero-image-thumb').outerHTML = ''
-            }, 300)
+    transformHeroImages()
 
-        })
-    })
 }).catch((error) => {
     console.error(error)
 })
@@ -41,4 +34,19 @@ let printArticle = (article, index) => {
                     </footer>
                 </article>
             `
+}
+
+let transformHeroImages = () => {
+    let heroImage = document.querySelectorAll('.article-hero-image-full')
+    for (var i = 0; i < heroImage.length; i++) {
+        let hero = heroImage[i]
+        console.log(hero)
+        hero.addEventListener('load', () => {
+            document.querySelector('.article-hero-image-thumb').style.opacity = 0
+            setTimeout(() => {
+                document.querySelector('.article-hero-image-thumb').outerHTML = ''
+            }, 300)
+
+        })
+    }
 }
