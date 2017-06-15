@@ -99,11 +99,17 @@ function easeInOut(currentTime, start, change, duration) {
     return -change / 2 * (currentTime * (currentTime - 2) - 1) + start;
 }
 
+var colophon = function colophon(startDate) {
+    var now = new Date();
+    return startDate < now.getFullYear() ? startDate += " - " + now.getFullYear() : now.getFullYear();
+};
 "use strict";
 
 // Log for debug
-console.log('js loaded', browser.width);
-var endpoint = "//scrummable.com/wp-json/wp/v2/posts?_embed";
+console.log('js loaded', browser.width
+// const endpoint = "//scrummable.com/wp-json/wp/v2/posts?_embed"
+);var endpoint = 'data/posts-original.json';
+
 axios.get(endpoint).then(function (response) {
     for (var i = 0; i < response.data.length; i++) {
         // log for debug
@@ -133,4 +139,6 @@ var transformHeroImages = function transformHeroImages() {
         });
     }
 };
+
+document.querySelector('#colophon time').innerText = colophon('2014');
 //# sourceMappingURL=app.js.map

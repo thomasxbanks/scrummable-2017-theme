@@ -3,7 +3,9 @@
 
 // Log for debug
 console.log('js loaded', browser.width)
-const endpoint = "//scrummable.com/wp-json/wp/v2/posts?_embed"
+// const endpoint = "//scrummable.com/wp-json/wp/v2/posts?_embed"
+const endpoint = 'data/posts-original.json'
+
 axios.get(endpoint).then((response) => {
     for (var i = 0; i < response.data.length; i++) {
         // log for debug
@@ -50,3 +52,5 @@ let transformHeroImages = () => {
         })
     }
 }
+
+document.querySelector('#colophon time').innerText = colophon('2014')

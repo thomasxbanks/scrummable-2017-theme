@@ -1,0 +1,11 @@
+#site-footer {
+    background: $clr_black;
+    color: $clr_white;
+    @extend .junior;
+}
+
+#colophon {
+    display: block;
+    padding: 2rem;
+    
+}

@@ -1,3 +1,13 @@
+html {
+    font-size: $font_size-med;
+    @media (min-width: $screen-small) {
+        font-size: between($font_size-med, $font_size-std, $screen-small, $screen-large);
+    }
+    @media (min-width: $screen-large) {
+        font-size: $font_size-std;
+    }
+}
+
 body {
     background: darken($clr_white, 5%);
 }

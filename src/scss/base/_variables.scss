@@ -19,6 +19,10 @@ $clr_error: hsb(0, 100, 50);
 $clr_success: hsb(120, 100, 50);
 $clr_warning: hsb(30, 100, 50);
 
+// Screen Sizes - Not breakpoints!
+$screen-small: 400px;
+$screen-large: 1440px;
+$max-width: $screen-large;
 
 // Face Stack/Family
 @import url('https://fonts.googleapis.com/css?family=Rubik|Sorts+Mill+Goudy');
@@ -50,5 +54,3 @@ $speed-fast: 250ms;
 $speed-std: 500ms;
 $speed-slow: 800ms;
 $speed-slowest: 1000ms;
-
-$max-width: 1440px;

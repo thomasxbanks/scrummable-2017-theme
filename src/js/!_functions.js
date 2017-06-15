@@ -47,8 +47,6 @@ let isAdult = (data) => {
     return data.age >= 18
 }
 
-
-
 function scrollTo(element, to, duration) {
     var start = element.scrollTop,
         change = to - start,
@@ -75,4 +73,9 @@ function easeInOut(currentTime, start, change, duration) {
     }
     currentTime -= 1;
     return -change / 2 * (currentTime * (currentTime - 2) - 1) + start;
+}
+
+let colophon = (startDate) => {
+    let now = new Date()
+    return (startDate < now.getFullYear()) ? startDate += " - " + now.getFullYear() : now.getFullYear()
 }
