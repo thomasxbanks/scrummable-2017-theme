@@ -1,0 +1,21 @@
+.featured-flag {
+    position: absolute;
+    top: -1rem;
+    left: -0.5rem;
+    z-index: 11;
+    background: $clr_brand;
+    @extend .bobby;
+    text-transform: uppercase;
+    padding: 0.5rem;
+    &:before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0.5rem 0.5rem 0;
+        border-color: transparent darken($clr_brand, 30%) transparent transparent;
+        position: absolute;
+        left: 0;
+        bottom: -0.5rem;
+    }
+}

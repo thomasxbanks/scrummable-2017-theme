@@ -5,7 +5,7 @@
 	background-position: center center;
 	background-attachment: scroll;
 	background-repeat: no-repeat;
-	[class*="article-hero-image-"] {
+	[class*="post-hero-image-"] {
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -19,7 +19,7 @@
 	}
 }
 
-.article-teaser .hero_wrapper {
+.post-teaser .hero_wrapper {
 	height: 300px;
 	overflow: hidden;
 	img {

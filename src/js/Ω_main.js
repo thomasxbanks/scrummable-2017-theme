@@ -3,14 +3,14 @@
 
 // Log for debug
 console.log('js loaded', browser.width)
-// const endpoint = "//scrummable.com/wp-json/wp/v2/posts?_embed"
-const endpoint = 'data/posts-original.json'
+const endpoint = "//scrummable.com/wp-json/wp/v2/posts?_embed"
+// const endpoint = 'data/posts-original.json'
 
 axios.get(endpoint).then((response) => {
     for (var i = 0; i < response.data.length; i++) {
         // log for debug
         console.info(response.data[i])
-        document.querySelector('.article-container-teaser').innerHTML += printArticle(response.data[i], i)
+        document.querySelector('.post-container-teaser').innerHTML += printArticle(response.data[i], i)
     }
 
     transformHeroImages()
@@ -21,7 +21,7 @@ axios.get(endpoint).then((response) => {
 
 let printArticle = (article, index) => {
     return `
-                <article class="article-teaser ${(index === 0) ? 'featured' : ''}">
+                <article class="post-teaser ${(index === 0) ? 'featured' : ''}">
                     <header class="hero_wrapper" style="background-image: url('${article['_embedded']["wp:featuredmedia"][0].source_url}')">
                         <img class="hero_img-thumb" src="${article['_embedded']["wp:featuredmedia"][0].media_details.sizes.medium.source_url}" />
                         <img class="hero_img-full" src="${article['_embedded']["wp:featuredmedia"][0].source_url}" />

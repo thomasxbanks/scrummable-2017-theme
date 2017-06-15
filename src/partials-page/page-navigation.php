@@ -1,22 +1,22 @@
-<ul class="list--hz" id="nav-icon__wrapper">
-    <li id="nav-icon--skip-link" class="nav-icon">
-        <button class="" type="button" data-sidebar="skip-link" data-role="button" aria-label="Skip to content" onClick="return_to_top();">
-            <i class="fa fa-arrow-down"></i>
+<ul class="list-hz">
+    <li id="nav_icon-skip-link">
+        <button class="material-icons" data-action="skip-link" aria-label="Skip to content" onClick="return_to_top();">
+            arrow_downward
         </button>
     </li>
-    <li id="nav-icon--search" class="nav-icon">
-        <button class="" type="button" data-sidebar="search" data-role="button" aria-label="Toggle Search Bar">
-            <i class="fa fa-search"></i>
+    <li id="nav_icon-search">
+        <button class="material-icons" data-action="search" aria-label="Toggle Search Bar">
+            search
         </button>
     </li>
-<!--    <li id="nav-icon--settings" class="nav-icon">-->
-<!--        <button class="" type="button" data-sidebar="settings" role="button" aria-label="Toggle Settings Menu">-->
-<!--            <i class="fa fa-cog"></i>-->
-<!--        </button>-->
-<!--    </li>-->
-    <li id="nav-icon--nav-primary" class="nav-icon">
-        <button class="" type="button" data-sidebar="nav-primary" data-role="button" aria-label="Toggle Navigation">
-            <i class="fa fa-bars"></i>
+    <li id="nav_icon-theme">
+        <button class="material-icons" data-action="toggle-theme" aria-label="Light Theme" aria-live="assertive">
+            invert_colors
+        </button>
+    </li>
+    <li id="nav_icon-primary">
+        <button class="material-icons" data-action="nav-primary" aria-label="Toggle Navigation">
+            menu
         </button>
     </li>
 </ul>

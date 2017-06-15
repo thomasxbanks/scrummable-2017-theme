@@ -33,13 +33,17 @@ html.redline * {
 @import "typography/typography"; // Elaborate on the basic typefaces for use in specific areas
 @import "typography/links"; // Styling for <a> tags
 //  ELEMENTS
-@import "elements/buttons"; // Button styles
-@import "elements/forms"; // Form styles
+@import "elements/ui/buttons"; // Button styles
+@import "elements/ui/forms"; // Form styles
 // Page layout elements
-@import "elements/masthead"; // Considerate masthead
-@import "elements/colophon"; // Site footer
-@import "elements/page_hero"; // Giant hero image in "that" style
-@import "elements/navigation-masthead"; // Icons in the Masthead
-@import "elements/navigation-primary"; // Navigation tray
-@import "elements/article-teaser"; // Article excerpts
-@import "elements/hero"; // Article featured images
+@import "elements/shared/masthead"; // Considerate masthead
+@import "elements/shared/colophon"; // Site footer
+@import "elements/shared/page_hero"; // Giant hero image in "that" style
+@import "elements/shared/navigation-masthead"; // Icons in the Masthead
+@import "elements/shared/navigation-primary"; // Navigation tray
+
+@import "elements/post/post_hero"; // post featured images
+@import "elements/post/post-teaser"; // post excerpts
+@import "elements/post/post-meta"; // post meta data
+@import "elements/post/flag"; // Special Post Flag
+@import "elements/post/post-full"; // post featured images

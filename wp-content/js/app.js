@@ -106,15 +106,15 @@ var colophon = function colophon(startDate) {
 "use strict";
 
 // Log for debug
-console.log('js loaded', browser.width
-// const endpoint = "//scrummable.com/wp-json/wp/v2/posts?_embed"
-);var endpoint = 'data/posts-original.json';
+console.log('js loaded', browser.width);
+var endpoint = "//scrummable.com/wp-json/wp/v2/posts?_embed";
+// const endpoint = 'data/posts-original.json'
 
 axios.get(endpoint).then(function (response) {
     for (var i = 0; i < response.data.length; i++) {
         // log for debug
         console.info(response.data[i]);
-        document.querySelector('.article-container-teaser').innerHTML += printArticle(response.data[i], i);
+        document.querySelector('.post-container-teaser').innerHTML += printArticle(response.data[i], i);
     }
 
     transformHeroImages();
@@ -123,7 +123,7 @@ axios.get(endpoint).then(function (response) {
 });
 
 var printArticle = function printArticle(article, index) {
-    return "\n                <article class=\"article-teaser " + (index === 0 ? 'featured' : '') + "\">\n                    <header class=\"hero_wrapper\" style=\"background-image: url('" + article['_embedded']["wp:featuredmedia"][0].source_url + "')\">\n                        <img class=\"hero_img-thumb\" src=\"" + article['_embedded']["wp:featuredmedia"][0].media_details.sizes.medium.source_url + "\" />\n                        <img class=\"hero_img-full\" src=\"" + article['_embedded']["wp:featuredmedia"][0].source_url + "\" />\n                    </header>\n                    <div class=\"content\">\n                        " + (index === 0 ? '<span class=\'featured-flag\'>featured</span>' : '') + "\n                        <h2>" + article.title.rendered + "</h2>\n                        <p>" + article.excerpt.rendered + "</p>\n                    </div>\n                    <footer>\n                        <a href=\"\" class=\"button\">Read more</a>\n                    </footer>\n                </article>\n            ";
+    return "\n                <article class=\"post-teaser " + (index === 0 ? 'featured' : '') + "\">\n                    <header class=\"hero_wrapper\" style=\"background-image: url('" + article['_embedded']["wp:featuredmedia"][0].source_url + "')\">\n                        <img class=\"hero_img-thumb\" src=\"" + article['_embedded']["wp:featuredmedia"][0].media_details.sizes.medium.source_url + "\" />\n                        <img class=\"hero_img-full\" src=\"" + article['_embedded']["wp:featuredmedia"][0].source_url + "\" />\n                    </header>\n                    <div class=\"content\">\n                        " + (index === 0 ? '<span class=\'featured-flag\'>featured</span>' : '') + "\n                        <h2>" + article.title.rendered + "</h2>\n                        <p>" + article.excerpt.rendered + "</p>\n                    </div>\n                    <footer>\n                        <a href=\"\" class=\"button\">Read more</a>\n                    </footer>\n                </article>\n            ";
 };
 
 var transformHeroImages = function transformHeroImages() {

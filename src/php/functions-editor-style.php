@@ -26,12 +26,12 @@ function my_mce_before_init($settings)
         array(
             'title' => 'Button',
             'selector' => 'a',
-            'classes' => 'button button--default'
+            'classes' => 'button'
         ),
         array(
             'title' => 'Cite',
             'block' => 'cite',
-            'classes' => 'quote__citation'
+            'classes' => 'quote_citation'
         ),
         array(
             'title' => '<code>',

@@ -1,5 +1,5 @@
-<div class="post__data post__data--meta">
-    <ul class="list--hz mob-stack">
+<div class="post_data post_data-meta">
+    <ul class="list-hz mob-stack">
         <li class="date">
             <?php post_date(); ?>
         </li>

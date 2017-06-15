@@ -1,24 +1,24 @@
-// Card layout for article excerpts
+// Card layout for post excerpts
 @media (max-width: 767px) {
-    .article-teaser {
+    .post-teaser {
         display: block;
         width: calc(100% - 1rem);
     }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-    .article-container-teaser {
+    .post-container-teaser {
         text-align: center;
         font-size: 0;
     }
-    .article-teaser {
+    .post-teaser {
         display: inline-block;
         vertical-align: top;
         width: calc(50% - 1rem);
         text-align: left;
     }
     @supports (display: flex) and (display: -webkit-flex) {
-        .article-container-teaser {
+        .post-container-teaser {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
@@ -26,25 +26,25 @@
             align-items: stretch;
             align-content: space-around;
         }
-        .article-teaser {
+        .post-teaser {
             flex-grow: 1;
         }
     }
 }
 
 @media (min-width: 1024px) {
-    .article-container-teaser {
+    .post-container-teaser {
         display: block;
         font-size: 0;
     }
-    .article-teaser {
+    .post-teaser {
         display: inline-block;
         vertical-align: top;
         width: calc(33.33% - 1rem);
         font-size: 1rem;
     }
     @supports (display: flex) and (display: -webkit-flex) {
-        .article-container-teaser {
+        .post-container-teaser {
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
@@ -52,7 +52,7 @@
             align-items: stretch;
             align-content: space-around;
         }
-        .article-teaser {
+        .post-teaser {
             flex-grow: 1;
             display: flex;
             flex-direction: column;
@@ -67,7 +67,7 @@
     }
 }
 
-.article-teaser {
+.post-teaser {
     background: $clr_white;
     margin: 0.5rem;
     transition: box-shadow $ease-main $speed-fast;
@@ -103,27 +103,5 @@
         header {
             height: 500px;
         }
-    }
-}
-
-.featured-flag {
-    position: absolute;
-    top: -1rem;
-    left: -0.5rem;
-    z-index: 11;
-    background: $clr_brand;
-    @extend .bobby;
-    text-transform: uppercase;
-    padding: 0.5rem;
-    &:before {
-        content: "";
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 0 0.5rem 0.5rem 0;
-        border-color: transparent darken($clr_brand, 30%) transparent transparent;
-        position: absolute;
-        left: 0;
-        bottom: -0.5rem;
     }
 }
