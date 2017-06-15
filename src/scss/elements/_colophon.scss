@@ -1,6 +1,5 @@
 #site-footer {
-    background: $clr_black;
-    color: $clr_white;
+    color: darken($clr_white, 50%);
     @extend .junior;
 }
 
