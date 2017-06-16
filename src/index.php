@@ -2,9 +2,8 @@
 <?php (!is_single()) ? get_template_part('partials-page/page', 'hero') : null; ?>
     <section id="main" class="container<?php echo ((!is_mobile() && (is_front_page() || (is_archive())))) ? ' masonry' : null; ?>" data-role="main" aria-label="Main page content">
         <?php /* begin the loop */
-        if (have_posts()) :
-            $count = 0; ?>
-            <?php while (have_posts()) : the_post(); $count++; ?>
+        if (have_posts()) : ?>
+            <?php while (have_posts()) : the_post(); ?>
                 <?php if (is_page()) : /* show page contents */ ?>
                     <?php get_template_part('pages/page', 'page'); ?>
                 <?php elseif (is_search()) : /* show search results */ ?>

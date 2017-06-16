@@ -1,0 +1,18 @@
+.post_data {
+    @extend .bobby;
+}
+
+.post_data-meta {
+    padding: 1rem 0.5rem 0 0.5rem;
+    ul li {
+        @extend .bobby;
+        padding: 0.25rem 0.5rem;
+        line-height: $lh;
+        .material-icons {
+            display: inline-block;
+            font-size: $font_size-std;
+            margin-right: 0.25rem;
+            vertical-align: middle;
+        }
+    }
+}

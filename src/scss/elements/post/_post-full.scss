@@ -1,0 +1,13 @@
+.post-full {
+    display: block;
+    width: 100%;
+    max-width: ($max-width / 2);
+    .content {
+        p {
+            @extend .richie;
+        }
+        .intro {
+            @extend .ralphie;
+        }
+    }
+}

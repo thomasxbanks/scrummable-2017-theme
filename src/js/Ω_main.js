@@ -21,18 +21,49 @@ axios.get(endpoint).then((response) => {
 
 let printArticle = (article, index) => {
     return `
-                <article class="post-teaser ${(index === 0) ? 'featured' : ''}">
-                    <header class="hero_wrapper" style="background-image: url('${article['_embedded']["wp:featuredmedia"][0].source_url}')">
-                        <img class="hero_img-thumb" src="${article['_embedded']["wp:featuredmedia"][0].media_details.sizes.medium.source_url}" />
+                <article class="${(index === 0) ? 'post-teaser featured' : 'post-teaser'}">
+                    ${(index === 0) ? '<span class=\'featured-flag\'>featured</span>' : ''}
+                    <header class="post_hero">
+                        <img class="hero_img-thumb" src="${article['_embedded']["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url}" />
                         <img class="hero_img-full" src="${article['_embedded']["wp:featuredmedia"][0].source_url}" />
+                        <div class="inner">
+                            <div class="texture">
+                                <h1 class="hero_title hero_title-post" itemprop="headline">
+                                    ${article.title.rendered}
+                                </h1>
+                            </div>
+                        </div>
                     </header>
+                    <div class="post_data post_data-meta">
+                        <ul class="list-hz mob-stack">
+                            <li class="date">
+                                <i class="material-icons" aria-hidden="true">date_range</i>
+                                Wednesday 24th September 2017
+                            </li>
+                            <li class="author">
+                                <a href="<?php echo get_author_posts_url(get_the_author_meta('ID'), get_the_author_meta('user_nicename')); ?>" title="Read all posts from Pigeon Thom">
+                                    <i class="material-icons" aria-hidden="true">person</i><cite class="author" itemprop="author">Pigeon Thom</cite>
+                                </a>
+                            </li>
+                            <li class="read_time">
+                                <i class="material-icons" aria-hidden="true">timer</i>
+                                12 minute read
+                            </li>
+                            <li class="comments">
+                                <i class="material-icons" aria-hidden="true">comment</i>
+                                120 comments
+                            </li>
+                        </ul>
+                    </div>
                     <div class="content">
-                        ${(index === 0) ? '<span class=\'featured-flag\'>featured</span>' : ''}
-                        <h2>${article.title.rendered}</h2>
                         <p>${article.excerpt.rendered}</p>
                     </div>
-                    <footer>
+                    <footer>                        
                         <a href="" class="button">Read more</a>
+                        <div class="post_data post_data-cats">
+                            <strong>Posted in:</strong>&nbsp;
+                            Business Analysis, Trending, Web Design
+                        </div>
                     </footer>
                 </article>
             `

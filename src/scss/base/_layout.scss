@@ -6,4 +6,11 @@ ul.list-hz {
     li {
         display: inline-block;
     }
+    &.mob-stack {
+        @media (max-width: $screen-small) {
+            li {
+                display: block;
+            }
+        }
+    }
 }

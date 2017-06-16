@@ -16,7 +16,7 @@ add_theme_support('post-thumbnails', array('post', 'page'));
 get_template_part('php/functions', 'custom');
 get_template_part('php/functions', 'post');
 get_template_part('php/functions', 'admin');
-get_template_part('php/functions', 'editor-style');
+// get_template_part('php/functions', 'editor-style');
 
 
 function scrummable_scripts()

@@ -1,8 +1,14 @@
 # The dreaded node modules!
 node_modules/**/*
 
+# npm fuckuppery
+npm-debug.log
+
 # OSX placement files
 **/**/.DS_Store
 
 # Production folder
-wp-content/**/*.php
+wp/**
+
+# Vagrant environment
+vagrant-local

@@ -31,35 +31,35 @@ let htmlmin = require('gulp-htmlmin')
 let path = {
 	css: {
 		i: './src/scss/**/*.scss',
-		o: './wp-content/'
+		o: './wp/wp-content/themes/scrummable-2017-theme/'
 	},
 	html: {
 		i: './src/**/*.html',
-		o: './wp-content/'
+		o: './wp/wp-content/themes/scrummable-2017-theme/'
 	},
 	php: {
 		i: './src/**/*.php',
-		o: './wp-content/'
+		o: './wp/wp-content/themes/scrummable-2017-theme/'
 	},
 	js: {
 		i: './src/js/**/*.js',
-		o: './wp-content/js/'
+		o: './wp/wp-content/themes/scrummable-2017-theme/js/'
 	},
 	img: {
 		i: './src/img/**/*',
-		o: './wp-content/img/'
+		o: './wp/wp-content/themes/scrummable-2017-theme/img/'
 	},
 	data: {
 		i: './src/data/**/*.json',
-		o: './wp-content/data/'
+		o: './wp/wp-content/themes/scrummable-2017-theme/data/'
 	},
 	include: {
 		i: './src/include/**/*',
-		o: './wp-content/include/'
+		o: './wp/wp-content/themes/scrummable-2017-theme/include/'
 	},
     txt: {
         i: './src/*.txt',
-		o: './wp-content/'
+		o: './wp/wp-content/themes/scrummable-2017-theme/'
     }
 }
 

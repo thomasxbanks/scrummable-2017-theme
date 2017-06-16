@@ -68,40 +68,37 @@
 }
 
 .post-teaser {
+    position: relative;
     background: $clr_white;
     margin: 0.5rem;
     transition: box-shadow $ease-main $speed-fast;
-    box-shadow: 0 0 0.5rem rgba(darken($clr_white, 50%), 0.6);
+    box-shadow: 0 0 0.5rem rgba(darken($clr_white, 50%), 0.9);
     &:hover {
-        box-shadow: 0 0 1rem rgba(darken($clr_white, 50%), 0.3);
+        box-shadow: 0 0 1rem rgba(darken($clr_white, 50%), 0.6);
     }
     .content {
-        position: relative;
-        @media (min-width: 719px) {
-            max-width: 720px;
+        @media (min-width: ($max-width / 2)) {
+            max-width: ($max-width / 2);
         }
-        padding: 1rem;
+        padding: 0.5rem 1rem;
         line-height: $lh;
-        h2,
-        p {
-            margin: 0;
-        }
-        h2 {
-            @extend .silvio;
-        }
         p {
             @extend .richie;
+            margin: 0;
         }
     }
     footer {
         width: 100%;
         padding: 1rem;
     }
+
     &.featured {
-        display: block;
-        width: calc(100% - 1rem);
-        header {
-            height: 500px;
+        
+        @media (max-width: 767px){
+            width: calc(100% - 1rem);
+        }
+        @media (min-width: 768px){
+            width: calc(50% - 1rem);
         }
     }
 }
