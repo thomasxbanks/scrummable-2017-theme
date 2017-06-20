@@ -2,6 +2,7 @@
     @extend .bobby;
     ul li {
         @extend .bobby;
+        color: var(--font-color);
         padding: 0.25rem 0.5rem;
         line-height: $lh;
         .material-icons {
@@ -9,6 +10,10 @@
             font-size: $font_size-std;
             margin-right: 0.25rem;
             vertical-align: middle;
+            line-height: $lh;
+        }
+        a {
+            line-height: inherit;
         }
     }
 }

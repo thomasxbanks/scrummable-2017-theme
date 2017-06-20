@@ -1,13 +1,65 @@
-.post-full {
-    display: block;
+.post-single {
     width: 100%;
-    max-width: ($max-width / 2);
     .content {
+        display: block;
+        width: 100%;
+        max-width: ($max-width / 2);
+        background: var(--color-teaser);
+        color: var(--font-color);
+        padding: 1rem;
+        margin: 0 auto;
+        @extend .richie;
+        text-align: left;
         p {
-            @extend .richie;
+            display: block;
+            margin: 1rem 0 1.5rem 0;
+            line-height: $lh;
         }
-        .intro {
-            @extend .ralphie;
+        .intro p {
+            @extend .paulie;
+            display: block;
+            margin: 0.5rem 0 1rem 0;
+            line-height: $lh;
         }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin: 0 auto;
+        }
+    }
+    footer {
+        display: block;
+        width: 100%;
+        max-width: ($max-width / 2);
+        background: var(--color-teaser);
+        color: var(--font-color);
+        padding: 1rem;
+        margin: 0 auto;
+    }
+}
+
+.wp-caption {
+    max-width: 100% !important;
+    margin: 1rem auto;
+}
+
+.wp-caption-text {
+    position: relative;
+    max-width: 100%;
+    margin: 0 !important;
+    padding: 0.5rem;
+    background: $clr_light;
+    font-size: $font_size-sml !important;
+    &:before {
+        content: "";
+        position: absolute;
+        top: -0.5rem;
+        left: 25%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 0.5rem 0.5rem 0.5rem;
+        border-color: transparent transparent $clr_light transparent;
     }
 }

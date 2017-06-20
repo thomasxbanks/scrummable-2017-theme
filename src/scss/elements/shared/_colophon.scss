@@ -2,6 +2,6 @@
     display: block;
     padding: 2rem;
     @extend .junior;
-    color: darken($clr_white, 66%);
+    color: var(--color-dark);
     text-align: center;
 }

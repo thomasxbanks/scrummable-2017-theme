@@ -69,14 +69,15 @@
 
 .post-teaser {
     position: relative;
-    background: $clr_white;
+    background: var(--color-teaser);
     margin: 0.5rem;
     transition: box-shadow $ease-main $speed-fast;
-    box-shadow: 0 0 0.5rem rgba(darken($clr_white, 50%), 0.9);
+    box-shadow: 0 0 0.5rem rgba(0,0,0, 0.6);
     &:hover {
-        box-shadow: 0 0 1rem rgba(darken($clr_white, 50%), 0.6);
+        box-shadow: 0 0 1rem rgba(0,0,0, 0.3);
     }
     .content {
+        color: var(--font-color);
         @media (min-width: ($max-width / 2)) {
             max-width: ($max-width / 2);
         }

@@ -1,4 +1,3 @@
-<section class="container navigation">
     <?php if (is_single()) :
         // TODO: Custom loop through;
             // a) Get (max 5) user-defined "Related Posts"
@@ -24,7 +23,7 @@
         );
         $cat_query = new WP_Query($args); ?>
         <?php if ($cat_query->have_posts()) : ?>
-            <section id="onward_journeys" class="container<?php echo (!is_mobile()) ? ' masonry' : null; ?>" data-role="more articles" aria-label="More articles">
+            <section id="onward_journeys" class="central-column post-container-teaser" data-role="more articles" aria-label="More articles">
             <?php while ($cat_query->have_posts()) : $cat_query->the_post(); ?>
                 <?php custom_post('teaser'); ?>
             <?php endwhile; ?>
@@ -53,4 +52,3 @@
             </div>
         <?php } ?>
     <?php endif; ?>
-</section>

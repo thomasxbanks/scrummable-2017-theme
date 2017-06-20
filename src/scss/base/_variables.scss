@@ -8,27 +8,33 @@ $baseline: 10px;
 $bl: $baseline;
 $b: $baseline;
 
-
 //  Colors
-$clr_brand: #aeaeaf;
-
 $clr_black: #010101;
+$clr_light: #cfcfca;
+$clr_dark: #565660;
 $clr_white: #fefefe;
+$clr_brand: #a0a0af;
 
 $clr_error: hsb(0, 100, 50);
 $clr_success: hsb(120, 100, 50);
 $clr_warning: hsb(30, 100, 50);
-
 // Screen Sizes - Not breakpoints!
 $screen-small: 400px;
 $screen-large: 1440px;
 $max-width: $screen-large;
-
 // Face Stack/Family
 @import url('https://fonts.googleapis.com/css?family=Comfortaa|Overpass:300');
-$font_face-main: "Overpass", Arial, "Helvetica Neue", Helvetica, sans-serif;
-$font_face-accent: "Comfortaa", "Times New Roman", Times, Baskerville, Georgia, serif;
-
+$font_face-main: "Overpass",
+Arial,
+"Helvetica Neue",
+Helvetica,
+sans-serif;
+$font_face-accent: "Comfortaa",
+"Times New Roman",
+Times,
+Baskerville,
+Georgia,
+serif;
 // Font Sizes
 $font_size-xsm: ($b * 1.2);
 $font_size-sml: ($b * 1.3);
@@ -36,18 +42,17 @@ $font_size-std: ($b * 1.6);
 $font_size-med: ($b * 2);
 $font_size-lrg: ($b * 3);
 $font_size-xlg: ($b * 4);
-
 // Calculate line-heights
 $lh: 1.6;
-
-// Font Colors
-$font_color-main: $clr_black;
-$font_color-invert: $clr_white;
-
 // Transition Easings
-$ease-main: cubic-bezier(.66,.04,.51,.92);
-$ease-swoosh: cubic-bezier(.53,-0.4,.81,1.46);
-
+$ease-main: cubic-bezier(.66,
+.04,
+.51,
+.92);
+$ease-swoosh: cubic-bezier(.53,
+-0.4,
+.81,
+1.46);
 // Transition Speeds
 $speed-fastest: 100ms;
 $speed-fast: 250ms;

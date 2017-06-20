@@ -12,8 +12,8 @@ button {
     max-width: 200px;
     padding: 1rem;
     margin: 1rem 0;
-    background: lighten($clr_black, 30%);
-    color: set-text-color(lighten($clr_black, 30%));
+    background: var(--color-dark);
+    color: var(--font-color-invert);
     transition: background $ease-main $speed-fast;
     text-align: center;
     text-transform: uppercase;
@@ -35,8 +35,8 @@ textarea:focus {
 }
 
 button:hover {
-    background: $clr_black;
-    color: set-text-color($clr_black);
+    background: var(--font-color);
+    color: var(--font-color-invert);
 }
 
 // Links styled like buttons

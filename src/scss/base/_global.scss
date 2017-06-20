@@ -1,3 +1,10 @@
+:root {
+        --color-black: #010101;
+        --color-dark: #565660;
+        --color-light: #cfcfca;
+        --color-white: #fefefe;
+        --color-brand: #a0a0af;
+    }
 html {
     font-size: $font_size-med;
     @media (min-width: $screen-small) {
@@ -6,10 +13,26 @@ html {
     @media (min-width: $screen-large) {
         font-size: $font_size-std;
     }
+    &[data-state="not-scroll"] {
+        overflow: hidden !important;
+    }
+    
+    &[data-theme="light"] {
+        --color-body: var(--color-light);
+        --color-teaser: var(--color-white);
+        --font-color: var(--color-black);
+        --font-color-invert: var(--color-white);
+    }
+    &[data-theme="dark"] {
+        --color-body: var(--color-dark);
+        --color-teaser: var(--color-black);
+        --font-color: var(--color-white);
+        --font-color-invert: var(--color-black);
+    }
 }
 
 body {
-    background: darken($clr_white, 5%);
+    background: var(--color-body);
 }
 
 .central-column {

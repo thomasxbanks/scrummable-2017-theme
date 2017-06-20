@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <?php (!is_single()) ? get_template_part('partials-page/page', 'hero') : null; ?>
-    <main class="central-column post-container-teaser" data-role="main" aria-label="Main page content">
+    <main class="post-container-teaser" data-role="main" aria-label="Main page content">
         <?php /* begin the loop */
         if (have_posts()) : ?>
             <?php while (have_posts()) : the_post(); ?>

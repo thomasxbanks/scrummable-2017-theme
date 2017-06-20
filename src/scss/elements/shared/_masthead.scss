@@ -5,8 +5,32 @@
     left: 0;
     z-index: 1000;
     width: 100%;
+    overflow: hidden;
+    transition: background $ease-main $speed-fast;
+    #site-title {
+        opacity: 0;
+        transform: scale(0);
+        transition: transform $ease-swoosh $speed-fast;
+    }
 }
 
 #masthead[data-state="considerate"] {
-    background: $clr_brand;
+    background: $clr_black;
+    #site-title {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#site-title {
+    float: left;
+    .company_logo a {
+        display: block;
+        @extend .ralphie;
+        color: $clr_white;
+        text-decoration: none;
+        line-height: 70px;
+        padding: 0 1.25rem;
+        text-transform: lowercase;
+    }
 }
