@@ -6,7 +6,7 @@
     z-index: 1000;
     width: 100%;
     overflow: hidden;
-    transition: background $ease-main $speed-fast;
+    transition: background $ease-main $speed-fast, transform $ease-swoosh $speed-fast;
     #site-title {
         opacity: 0;
         transform: scale(0);
@@ -14,12 +14,20 @@
     }
 }
 
-#masthead[data-state="considerate"] {
+#masthead.considerate {
     background: $clr_black;
     #site-title {
         opacity: 1;
         transform: scale(1);
     }
+}
+
+#masthead[data-state="not-active"] {
+    transform: translateY(-100%);
+}
+
+#masthead[data-state="is-active"] {
+    transform: translateY(0);
 }
 
 #site-title {

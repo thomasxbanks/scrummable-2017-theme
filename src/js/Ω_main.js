@@ -56,16 +56,26 @@ $(document).ready(() => {
         document.querySelector('html').setAttribute('data-theme', READCOOKIE('theme'))
     }
 
+
     $(document).scroll(function () {
         if ($(document).scrollTop() >= $('.post_hero').height()) {
-            // user scrolled 50 pixels or more;
-            // do stuff
-            $('#masthead').attr('data-state', 'considerate')
-            console.log('1 screen!')
+            $('#masthead').addClass('considerate')
         } else {
-            $('#masthead').attr('data-state', '')
-            console.log(browser.height, $(document).scrollTop())
+            $('#masthead').removeClass('considerate')
         }
+    })
+
+    var lastScrollTop = 0;
+    $(window).scroll(function (event) {
+        var st = $(this).scrollTop();
+        if (st > lastScrollTop) {
+            // downscroll code
+            $('#masthead.considerate').attr('data-state', 'not-active')
+        } else {
+            // upscroll code
+            $('#masthead.considerate').attr('data-state', 'is-active')
+        }
+        lastScrollTop = st;
     });
 
 })
