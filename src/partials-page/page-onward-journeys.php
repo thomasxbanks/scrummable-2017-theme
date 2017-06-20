@@ -36,17 +36,17 @@
     <?php endif; ?>
     <?php if ($wp_query->max_num_pages > 1) : ?>
         <?php if (!is_mobile()) { ?>
-            <div class="button__wrapper">
-                <button id="load_posts" title="Load the next <?php echo get_option('posts_per_page'); ?> posts" class="button button--big" data-page="<?php echo (get_query_var('paged', 1) == '0') ? '1' : get_query_var('paged', 1); ?>" data-last-page="<?php echo $wp_query->max_num_pages; ?>">
+            <div class="button_wrapper">
+                <button id="load_posts" title="Load the next <?php echo get_option('posts_per_page'); ?> posts" class="button button-center" data-page="<?php echo (get_query_var('paged', 1) == '0') ? '1' : get_query_var('paged', 1); ?>" data-last-page="<?php echo $wp_query->max_num_pages; ?>">
                     Load more posts
                 </button>
             </div>
         <?php } else { ?>
-            <div class="button__wrapper">
+            <div class="button_wrapper">
                 <?php
                 (get_query_var('paged', 1) == '0') ? $current_page = '1' : $current_page = get_query_var('paged', 1);
-                echo ($current_page < $wp_query->max_num_pages) ? "<a href=\"/page/" . ($current_page + 1) . "\" class=\"button button--big\" title=\"Load page ".($current_page + 1)."\">Next Posts</a>" : null;
-                echo ($current_page > 1) ? "<a href=\"/page/" . ($current_page - 1) . "\" class=\"button button--big\" title=\"Load page ".($current_page - 1)."\">Previous Posts</a>" : null;
+                echo ($current_page < $wp_query->max_num_pages) ? "<a href=\"/page/" . ($current_page + 1) . "\" class=\"button button-center\" title=\"Load page ".($current_page + 1)."\">Next Posts</a>" : null;
+                echo ($current_page > 1) ? "<a href=\"/page/" . ($current_page - 1) . "\" class=\"button button-center\" title=\"Load page ".($current_page - 1)."\">Previous Posts</a>" : null;
                 ?>
                 <?php //previous_posts_link('Previous posts'); ?>
                 <?php //next_posts_link('Next posts'); ?>

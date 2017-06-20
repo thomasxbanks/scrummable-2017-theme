@@ -1,10 +1,7 @@
 #site-footer {
-    color: darken($clr_white, 50%);
-    @extend .junior;
-}
-
-#colophon {
     display: block;
     padding: 2rem;
-    
+    @extend .junior;
+    color: darken($clr_white, 66%);
+    text-align: center;
 }

@@ -44,3 +44,8 @@ button:hover {
     @extend button;
     text-decoration: none;
 }
+
+.button-center {
+    margin-right: auto;
+    margin-left: auto;
+}

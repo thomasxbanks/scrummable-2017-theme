@@ -9,7 +9,6 @@ $the_tags = get_the_tag_list();
         </a>
     <?php if (($the_category) || ($the_tags)) { ?>
         <div class="post_data post_data-cats">
-            <strong>Posted in:</strong>&nbsp;
             <?php ($the_category) ? get_template_part('partials-post/post', 'cats') : null; ?>
             <?php ($the_tags) ? get_template_part('partials-post/post', 'tags') : null; ?>
         </div>
