@@ -1,6 +1,6 @@
 <ul class="list-hz">
     <li id="nav_icon-skip-link">
-        <button class="material-icons" data-action="skip-link" aria-label="Skip to content" onClick="return_to_top();">
+        <button class="material-icons" data-action="skip-link" aria-label="Skip to content">
             arrow_downward
         </button>
     </li>

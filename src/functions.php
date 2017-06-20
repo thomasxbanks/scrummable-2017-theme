@@ -25,6 +25,7 @@ function scrummable_scripts()
     wp_enqueue_style('scrummable-style', get_stylesheet_uri());
 
     wp_enqueue_script('jQuery', '//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js');
+    wp_enqueue_script('axios', '//cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js');
     wp_enqueue_script('scrummable-js', get_template_directory_uri() . '/js/app.js', array(), '20120206', true);
 
     if (is_singular() && comments_open() && get_option('thread_comments')) {
