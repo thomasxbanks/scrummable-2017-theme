@@ -16,3 +16,10 @@
 .post_data-meta {
     padding: 1rem 0.5rem 0 0.5rem;
 }
+
+.post_data-categories {
+    ul li a {
+        // @TODO: style kind of like the feature flags / nicked "pills" from cube3/alphaLSG
+        font-weight: normal;
+    }
+}

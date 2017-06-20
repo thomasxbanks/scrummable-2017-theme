@@ -9,7 +9,7 @@
             ));
             // echo "<pre>".print_r($categories, true)."</pre>";
             foreach ($categories as $category) {
-                echo "<li><a href='".$category->slug."'>".$category->name."</a></li>";
+                echo "<li><a href='/category/".$category->slug."'>".$category->name."</a></li>";
             } ?>
         </ul>
     </nav>
