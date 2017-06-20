@@ -5,7 +5,6 @@
     left: 0;
     z-index: 1000;
     width: 100%;
-    overflow: hidden;
     transition: background $ease-main $speed-fast, transform $ease-swoosh $speed-fast;
     #site-title {
         opacity: 0;
